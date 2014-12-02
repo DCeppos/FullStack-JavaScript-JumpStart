@@ -1,0 +1,47 @@
+// Practice with Strings
+
+// *STEP* Create the variable `currentCity` and set it to the value of "NewYorkCity"
+
+var currentCity = "NewYorkCity";
+
+
+
+// *STEP* Display the value at the 5th index of the variable `currentCity` and then run your code. This should display the character "r".
+currentCity.charAt(5);
+
+
+// *STEP* Display the length using the length property on `currentCity` and then run your code. This should display the value 11.
+
+currentCity.length;
+
+
+// *STEP* Change all the characters of the variable `currentCity` to Upper Case letters
+// using the .toUpperCase() method. Then run your code. This should display "NEWYORKCITY". Make sure to run your code.
+
+currentCity.toUpperCase();
+
+
+
+// *STEP* Using the slice method, return the first 7 characters of the `currentCity`, the value should be "NewYork". Make sure to run your code.
+
+currentCity.slice(0,7);
+
+
+// *STEP A* Create a new variable called "best". Set it equal to the string " is the best" appended to the variable currentCity. If you run your code you will not see the best variable displayed. You must complete STEP B to see your code run.
+
+var best = currentCity + " is the best";
+
+
+// *STEP B* Use "console.log(best)" to output the variable "best" to the console.(now it will display)
+// This will log to the console "NewYorkCityis the best"
+
+console.log(best);
+
+// *STEP A* Extract "is the best" using the slice method from the "best" variable, and make a new variable called "imTheBest" with the value "YourName is the best"
+
+var imTheBest = "Dan" + best.slice(11, 23);
+
+// *STEP B* Use "console.log(imthebest)" to output the variable "imthebest" to the console.(now it will display)
+// This will log to the console "YourName is the best"
+
+console.log(imTheBest);
