@@ -1,0 +1,17 @@
+function vowelCount(str){
+    var totalVowels = 0;
+    var vowels ="aeiou";
+    str = str.toLowerCase();
+    
+    
+    for (var i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) >= 0 ) {
+        totalVowels++;    
+            
+        }
+       
+    }
+    return totalVowels;
+    }
+    
+    vowelCount("Good Job");
