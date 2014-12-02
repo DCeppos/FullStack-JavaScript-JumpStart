@@ -1,0 +1,48 @@
+// Write a program that creates a string that represents a grid.
+// At each position of the grid there is either a "#" or a “ ” character. The characters should form
+// the pattern listed in the example output.
+
+// NOTE: It may be hard to get the proper output in repl.it, try using the javascript console in Google Chrome's JavaScript Console (cmd+option+j)
+
+// "# # # # 
+//  # # # #
+// # # # # 
+//  # # # #
+// # # # # 
+//  # # # #
+// # # # # 
+//  # # # #"
+
+// The output would look like this in repl.lit:
+
+// '# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n'
+
+
+function myGrid(line){
+    var hash = "#";
+    var space = " ";
+    var lineBreak = "\n";
+    var grid = "";
+    
+    for(var i = 0; i < (line*(line-1)); i++){
+        
+        if (i % 2 === 0 && (i+1) % line !== 0){
+            grid += hash;
+            
+        }
+        else if (i % 2 === 1 && (i+1) % line !== 0) {
+            grid += space;
+            
+        }
+        else{
+            grid += lineBreak;
+            
+        }
+        
+    }
+    return grid;
+    
+    
+}
+
+myGrid(9);
