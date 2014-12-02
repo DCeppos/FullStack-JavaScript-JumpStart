@@ -1,0 +1,12 @@
+function reverseString(str) {
+    
+    var finalString = "";
+    
+    for (var i = str.length-1; i>=0; i--){
+        
+        finalString += str[i];
+    }
+    
+    return finalString;
+    
+    }
