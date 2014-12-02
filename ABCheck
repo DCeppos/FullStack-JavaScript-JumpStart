@@ -1,0 +1,32 @@
+// Create the function "aBCheck(string)" that accepts a string parameter. Return the STRING value "true" if the characters a and b are separated by 3 places anywhere in the string at least one time. Otherwise return the STRING value "false"
+ 
+// EXAMPLES:
+// INPUT: aBCheck("pane borrowed");
+// OUTPUT: "true"
+// INPUT: aBCheck("chainsbreak")
+// OUTPUT: "true"
+
+
+function aBCheck(string){
+     string = string.toLowerCase();
+    
+     var i = 0;
+    
+     while (i < string.length){
+      if (Math.abs((string.indexOf("b")) - (string.indexOf("a"))) === 4){ 
+      
+          return "true";
+          
+      }
+      else {
+          i++;
+      }        
+      }
+    
+    return "false";
+    }
+  
+//these cases should be true    
+aBCheck("pane borrowed");
+aBCheck("chainsbreak");
+aBCheck("chinsbreeak");
