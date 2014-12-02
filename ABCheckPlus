@@ -1,0 +1,55 @@
+//the function accepts four parameters, the full string, one letter to find, a second letter to find, and the number of letters  that should be skipped between them
+
+function aBCheckPlus(string, findA, findB, skip){
+
+//the string and letters are set to lower case to account for case sensitivity
+string = string.toLowerCase();
+findA = findA.toLowerCase();
+findB = findB.toLowerCase();
+
+//skipNum is created so that the function knows to check for findA or findB in the position AFTER the skip 
+var skipNum = skip + 1;
+
+//checks to make sure the string is long enough
+if (string.length <= skipNum){
+    return "Your string is not long enough";
+    
+}
+
+else{
+
+  for (var i=0; i <= string.length; i++){
+
+    //loops through the string looking for either findA or findB
+    if (string[i]===findA || string[i]===findB){
+          
+          //looks for either findA or findB in skipNum's spot in the array      
+          if (string[i+skipNum] === findA || string[i+skipNum] === findB){
+              return true;
+          }
+          
+          //if findA or findB are not identified in skipNum's place, false
+          else {
+              return false;
+          }
+          
+    }
+    //if the loop has completed without identifying findA or findB, false
+    else if (i === string.length){
+        return false;
+        
+    }
+    
+    //if the spot in the array, does not have findA or findB, continue looping
+    else {
+        continue;
+    }
+
+  }
+}
+
+}
+// these cases should all be true
+aBCheckPlus("pAne borrowed", "A", "B", 3);
+aBCheckPlus("heart", "e", "r", 1);
+aBCheckPlus("header", "e", "E", 2);
