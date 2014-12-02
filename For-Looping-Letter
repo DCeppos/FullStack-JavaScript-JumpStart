@@ -1,0 +1,3 @@
+for (var str = "S"; str.length <= 5; str = str+ "S"){
+ console.log(str);
+}
