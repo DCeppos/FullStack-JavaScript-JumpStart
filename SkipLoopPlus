@@ -1,0 +1,57 @@
+function skipLoopPlus(start, skip, total){
+    var i = 0;
+    
+    //evaluates whether start is less than total
+    if(start < total ){
+      
+      //sets the loop to count up
+        for(i=start; i < total; i++){
+            
+            //skips number listed to skip
+            if(i=== skip){
+                continue;
+                
+            }
+            else{
+                console.log("Number " + i);
+                
+            }
+                        
+        }
+                
+    }
+    
+    //evaluates whether total is less than start
+    else if(total < start){
+         
+         //sets the loop to count down
+         for(i=start; i > total; i--){
+          
+          //skips number listed to skip  
+            if(i=== skip){
+                continue;
+                
+            }
+            else{
+                console.log("Number " + i);
+                
+            }
+                        
+        }
+        
+        
+    }
+    
+    //ends the function if start and total is the same
+    else{
+        return "Start and Total cannot be the same";
+        
+    }
+    
+    
+    }
+
+//All test cases work    
+skipLoopPlus(12,22,23);    
+skipLoopPlus(3,2,1);    
+skipLoopPlus(10,7,10);
